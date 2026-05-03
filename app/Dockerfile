@@ -11,6 +11,14 @@ RUN apt-get update && apt-get install -y \
     && apt-get update && apt-get install -y google-chrome-stable \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install -y \
+    fonts-liberation \
+    libnss3 \
+    libxss1 \
+    libasound2 \
+    libatk-bridge2.0-0 \
+    libgtk-3-0
+
 # Use selenium-manager (bundled in selenium 4.6+) — it auto-downloads matching ChromeDriver
 WORKDIR /tests
 COPY requirements.txt .
