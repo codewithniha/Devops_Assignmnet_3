@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add New Task</h2>
+<div class="form-card">
+  <form method="post" id="add-task-form">
+    <label for="title">Task Title *</label>
+    <input type="text" id="title" name="title" placeholder="Enter task title" required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description" placeholder="Task description (optional)"></textarea>
+
+    <label for="priority">Priority</label>
+    <select id="priority" name="priority">
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+    </select>
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+        <option value="Pending" selected>Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Done">Done</option>
+    </select>
+
+    <button type="submit" class="btn btn-submit" id="submit-btn">Add Task</button>
+  </form>
+</div>
+{% endblock %}
