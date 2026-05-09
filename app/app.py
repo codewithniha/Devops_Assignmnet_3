@@ -12,7 +12,7 @@ def get_db():
         password=os.environ.get('DB_PASS', 'root'),
         database=os.environ.get('DB_NAME', 'taskdb')
     )
-
+# this line is for testing pipeline
 @app.route('/')
 def index():
     db = get_db()
